@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sensor_hal_config>
+  <sensor type="accelerometer">
+    <platform_config driver_node_type="input_event">
+        <name>accel_kxcj9000</name>
+        <activate_node>/sys/bus/i2c/devices/3-000f/enable</activate_node>
+        <poll_node>/sys/bus/i2c/devices/3-000f/poll</poll_node>
+        <data_node/>
+        <calibration_function>AccelCalibration</calibration_function>
+      </platform_config>
+      <device>
+        <name>KXCJ Accelerometer</name>
+        <vendor>KIONIX</vendor>
+        <version>1</version>
+        <maxRange unit="GRAVITY_EARTH">4</maxRange>
+        <resolution unit="GRAVITY_EARTH">0.001953125</resolution>
+        <power>0.11</power>
+        <minDelay>10000</minDelay>
+        <mapper axis_x="X" axis_y="Y" axis_z="Z"/>
+        <scale axis_x="0.001953125" axis_y="-0.001953125" axis_z="-0.001953125" unit="GRAVITY_EARTH"/>
+      </device>
+  </sensor>
+  <sensor type="accelerometer">
+    <platform_config driver_node_type="input_event">
+				<name>accel_mma8653</name>
+				<activate_node>/sys/bus/i2c/devices/3-001d/enable</activate_node>
+				<poll_node>/sys/bus/i2c/devices/3-001d/poll</poll_node>
+				<data_node></data_node>
+                                <calibration_function>AccelCalibration</calibration_function>
+			</platform_config>
+      <device>
+				<name>MMA8653FC Accelerometer</name>
+				<vendor>Freescale</vendor>
+				<version>1</version>
+				<maxRange unit="GRAVITY_EARTH">2</maxRange>
+				<resolution unit="GRAVITY_EARTH">0.003</resolution>
+				<power>0.11</power>
+				<minDelay>10000</minDelay>
+				<mapper axis_x="Y" axis_y="X" axis_z="Z"></mapper>
+				<scale axis_x="0.003" axis_y="0.003" axis_z="-0.003" unit="GRAVITY_EARTH"></scale>
+      </device>
+  </sensor>
+</sensor_hal_config>
